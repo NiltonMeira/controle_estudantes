@@ -1,0 +1,28 @@
+main{
+    background-color: #f2f4f8;
+    height: 1000px;
+}
+
+.main_sala{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.input_sala{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 30%;
+    min-width: 400px;
+    margin-top: 30px;
+    gap: 15px;
+    background-color: white;
+    border: 2px white solid;
+    border-radius: 10px; 
+}
+
+.btn{
+    border: 2px grey solid;
+    max-width: 30%;
+    margin-bottom: 15px;
+}
