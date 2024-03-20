@@ -38,19 +38,31 @@ body{
     max-width: calc(100% / 3.1);
     margin-top: 30px;
     background-color: white;
+    flex-wrap: wrap;
 }
 
 .img_pessoa{
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
 }
 
 .btn{
     border: 1.5px grey solid;
+    color: white;
     margin-bottom: 15px;
+    background-color: #181818;
+    margin-top: 15px;
 }
 
 .salas{
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #f2f4f8;
+}
+#cars{
+    border-radius: 10px;
+    background-color: #f2f4f8;
+}
+.input_dom{
+    border-radius: 15px;
 }

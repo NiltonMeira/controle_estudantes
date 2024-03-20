@@ -11,11 +11,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/sala_main.css">
-    <link rel="stylesheet" href="./src/styles/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/sala_main.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
-    <script src="./src/script/script.js"></script>
+    <script  defer src="../script/script.js"></script>
 
 </head>
 
@@ -35,10 +35,10 @@
                             <a class="nav-link active" aria-current="page" href="#">Cadastrar:</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./alunos.html">Alunos</a>
+                            <a class="nav-link" href="../views/alunos.ejs">Alunos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./sala.html">Sala</a>
+                            <a class="nav-link" href="../views/sala.ejs">Sala</a>
                         </li>
                     </ul>
                 </div>
@@ -50,14 +50,23 @@
         <div class="container-fluid main_sala">
             <div class="container-fluid input_sala">
                 <h3>Cadastrar novo Aluno</h3>
-                <p>Nome</p>
-                <input type="text" id="aluno_nome">
-                <p>Idade</p>
-                <input type="text" id="aluno_capacidade">
-                <p>Sexo</p>
-                <input type="text" id="aluno_sexo">
-                <p>Sala</p>
-                <input type="text" id="aluno_sala">
+                <div class="profile">
+                    <img src="../img/usuario.png" alt="..." id="imgFoto" class="img_cadastro">
+                    <input type="file" id="flImage" name="foto" accept="image/*" style="display: none;">                    
+                </div>
+                
+                <span>Nome</span>
+                <input type="text" id="aluno_nome" class="input_dom">
+                <span>Idade</span>
+                <input type="text" id="aluno_capacidade" class="input_dom">
+                <span>Sexo</span>
+                <input type="text" id="aluno_sexo" class="input_dom">
+
+                <select name="sala_list" id="sala_list" class="sala_list">
+                    <option value="Selecione uma sala" selected disabled selected hidden>Escolha uma sala</option>
+                    <option value="ti">ti</option>
+                    <option value="meca">meca</option>              
+                </select>
                 
                 <button type="button" class="btn">Cadastrar</button>
             </div> 

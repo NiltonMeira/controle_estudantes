@@ -26,3 +26,29 @@ main{
     max-width: 30%;
     margin-bottom: 15px;
 }
+
+.profile{
+    display: flex;
+    justify-content: center;
+}
+
+.input_dom{
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+.img_cadastro{
+    width: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+
+.sala_list{
+    margin-top: 15px;
+    padding: 0;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px black solid;
+    
+}
