@@ -23,7 +23,7 @@
     <header>
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.html"><span class="controle-nav">CONTROLE </span>de Estudantes</a>
+                <a class="navbar-brand" href="/"><span class="controle-nav">CONTROLE </span>de Estudantes</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -35,10 +35,10 @@
                             <a class="nav-link active" aria-current="page" href="#">Cadastrar:</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./alunos.html">Alunos</a>
+                            <a class="nav-link" href="/alunos">Alunos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./sala.html">Sala</a>
+                            <a class="nav-link" href="/sala">Sala</a>
                         </li>
                     </ul>
                 </div>
@@ -48,14 +48,20 @@
 
     <main>
         <div class="container-fluid main_sala">
-            <div class="container-fluid input_sala">
-                <h3>Cadastrar nova sala</h3>
-                <p>Nome</p>
-                <input type="text" id="sala_nome">
-                <p>Capacidade</p>
-                <input type="text" id="sala_capacidade">
-                <button type="button" class="btn">Cadastrar</button>
-            </div> 
+           
+            <form action="/sala" method="post">
+                    <div class="container-fluid input_sala">
+                    <h3>Cadastrar nova sala</h3>
+                    <p>Nome</p>
+                    <input type="text" id="sala_nome" name="nome">
+                    <p>Capacidade</p>
+                    <input type="text" id="sala_capacidade" name="capacidade">
+                    <button type="post" class="btn">Cadastrar</button>
+                </div>
+            </form>
+             
+             
+               
         </div>
              
     </main>
