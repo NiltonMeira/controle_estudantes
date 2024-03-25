@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/sala_main.css">
     <link rel="stylesheet" href="../css/footer.css">
 
-    <script  defer src="../script/script.js"></script>
+    <script defer src="../js/script.js"></script>
 
 </head>
 
@@ -49,29 +49,44 @@
     <main>
         <div class="container-fluid main_sala">
             <div class="container-fluid input_sala">
-                <h3>Cadastrar novo Aluno</h3>
-                <div class="profile">
-                    <img src="../img/usuario.png" alt="..." id="imgFoto" class="img_cadastro">
-                    <input type="file" id="flImage" name="foto" accept="image/*" style="display: none;">                    
-                </div>
-                
-                <span>Nome</span>
-                <input type="text" id="aluno_nome" class="input_dom" name="name">
-                <span>Idade</span>
-                <input type="text" id="aluno_capacidade" class="input_dom" name="idade ">
-                <span>Sexo</span>
-                <input type="text" id="aluno_sexo" class="input_dom" name="sexo">
-                <span>Sala </span>
+                <h3>Cadastrar novo Aluno</h3>                
 
-                <select name="sala_list" id="sala_list" class="sala_list" name="sala">
-                    
-                    <option value="Selecione uma sala" selected disabled selected hidden>Escolha uma sala</option>                              
-                </select>
-                
-                <button type="button" class="btn">Cadastrar</button>
-            </div> 
+
+                <form action="/alunos" method="post" class="form_box" enctype="multipart/form-data">
+                    <div class="container-fluid input_sala">
+                        <div class="profile">
+                            <img src="../img/usuario.png" alt="..." id="imgFoto" class="img_cadastro">
+                            <input type="file" id="flImage" name="foto" accept="image/*" style="display: none;">
+                        </div>
+                        <span>Nome</span>
+                        <input type="text" id="aluno_nome" class="input_dom" name="name">
+                        <span>Idade</span>
+                        <input type="text" id="aluno_capacidade" class="input_dom" name="idade">
+                        <span>Sexo</span>
+                        <input type="text" id="aluno_sexo" class="input_dom" name="sexo">
+                        <span>Sala </span>
+                        <select id="sala_list" class="sala_list" name="sala" required>
+                            <% for (let i=0; i<salas.length; i++) { %>
+                                <option value='<%= salas[i].IDSala %>'>
+                                    <%= salas[i].Nome %>
+                                </option>
+                                <% } %>
+                        </select>
+                        <button type="submit" class="btn">Cadastrar</button>
+
+                    </div>
+
+
+
+
+                </form>
+
+
+
+
+            </div>
         </div>
-             
+
     </main>
 
 </body>

@@ -50,42 +50,37 @@
 
         <div class="container-fluid select_box">
             <label for="cars">Salas de aula:</label>
-
-            <select name="cars" id="cars" class="sal">
-                <option value="Selecione uma sala" selected disabled selected hidden>Escolha uma sala</option>
-                <option value="ti">ti</option>
-                <option value="meca">meca</option>              
-            </select>
+            <form action="/" method="post">
+                <select id="sala_list" class="sala_list" name="sala" onchange="this.form.submit()">
+                    <% for (let i=0; i<salas.length; i++) { %>
+                        <option value='<%= salas[i].IDSala %>'>
+                            <%= salas[i].Nome %>
+                        </option>
+                        <% } %>
+                </select>
+            </form>
+           
         </div>
 
         <div class="container-fluid main_box">
             <h4>Alunos</h4>
             <div class="container-fluid names_box">
-                <div class="container-fluid card_person ">
-                    <img class="img_pessoa" src="img/GeraldoPortrait.webp" alt="" style="border-radius: 100%;">
-                    <p>Donathan</p>
-                    <p>Idade: 19</p>
-                    <button type="button" class="btn">Editar</button>
-                </div>
-                <div class="container-fluid card_person ">
-                    <img class="img_pessoa" src="img/GeraldoPortrait.webp" alt="" style="border-radius: 100%;">
-                    <p>Donathan</p>
-                    <p>Idade: 19</p>
-                    <button type="button" class="btn">Editar</button>
-                </div>
-                <div class="container-fluid card_person ">
-                    <img class="img_pessoa" src="img/GeraldoPortrait.webp" alt="" style="border-radius: 100%;">
-                    <p>Donathan</p>
-                    <p>Idade: 19</p>
-                    <button type="button" class="btn">Editar</button>
-                </div>
-                <div class="container-fluid card_person ">
-                    <img class="img_pessoa" src="img/GeraldoPortrait.webp" alt="" style="border-radius: 100%;">
-                    <p>Donathan</p>
-                    <p>Idade: 19</p>
-                    <button type="button" class="btn">Editar</button>
-                </div>
-                
+                <% for (let i=0; i<alunos.length; i++) { %>
+                    <div class="card_person">
+                        <img class="img_pessoa" src="img/GeraldoPortrait.webp" alt="" style="border-radius: 100%;">
+                        <p> Nome: <%= alunos[i].Nome %>
+                        </p>
+                        <p> Idade: <%= alunos[i].Idade %>
+                        </p>
+                        <button type="button" class="btn">Editar</button>
+                        
+                    </div>
+                        
+
+                        <% } %>
+                    </div>
+
+
             </div>
         </div>
 

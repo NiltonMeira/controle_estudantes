@@ -31,7 +31,7 @@ Sexo: {
 },
 
 Foto: {
-    type: Sequelize.INTEGER(50),
+    type: Sequelize.STRING(50),
     allowNull: false
 }
 
@@ -43,4 +43,4 @@ aluno.belongsTo(sala,{
 });
 
 // Exportando essa tabela
-module.exports = sala;
+module.exports = aluno;
